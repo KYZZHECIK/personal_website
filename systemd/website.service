@@ -1,0 +1,14 @@
+[Unit]
+Description=Static website (python http.server)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=server
+WorkingDirectory=/home/server/personal_website/personal_website
+ExecStart=/usr/bin/env bash ./scripts/run_server.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
