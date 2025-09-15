@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-exec /usr/bin/cloudflared --no-autoupdate tunnel --url http://127.0.0.1:8080
+exec /usr/bin/cloudflared --no-autoupdate tunnel --url http://10.128.46.175:8888
 
