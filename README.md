@@ -10,6 +10,7 @@ quick tunnel so a custom domain is not required.
 * `website/` – HTML files to be served.
 * `scripts/run_server.sh` – launches `python -m http.server` on port `8080`.
 * `scripts/run_cloudflared.sh` – opens a Cloudflare quick tunnel to the local site.
+
 * `systemd/website.service` – runs the server at boot.
 * `systemd/cloudflared-quick.service` – starts a Cloudflare quick tunnel for
   external access.
@@ -33,6 +34,7 @@ curl -I http://localhost:8080
    paths in the service files).
 
 3. Copy the unit files, reload systemd, and enable them:
+
 
    ```bash
    sudo cp systemd/*.service /etc/systemd/system/
