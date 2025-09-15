@@ -5,8 +5,8 @@ After=network-online.target
 
 [Service]
 User=server
-WorkingDirectory=/home/server
-ExecStart=/usr/bin/cloudflared --no-autoupdate tunnel --url http://127.0.0.1:8080
+WorkingDirectory=%h
+ExecStart=/usr/bin/env bash %h/personal_website/scripts/run_cloudflared.sh
 Restart=always
 RestartSec=2
 
